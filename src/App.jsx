@@ -11,10 +11,14 @@ import BowlShortRibSuadero from "./BowlShortRibSuadero.jpg";
 import ChipsGuac from "./ChipsGuac.jpg";
 import ChickenTaco from "./ChickenTaco.jpg";
 import GalleryNachos from "./Nachos.jpg";
+import QuesodillaSoda from "./QuesadillaSoda.jpg";
 import Quesodillas from "./Quesodillas.jpg";
 import ShrimpTaco from "./ShrimpTaco1.jpg";
 import Spread from "./Spread2.jpg";
 import BurritoSmall from "./BurritoSmall.jpg";
+
+//CTA BG
+import Sodas from "./Sodas.jpg";
 
 export default function App() {
   return (
@@ -127,6 +131,32 @@ export default function App() {
             ))}
           </div>
         </section>
+        {/* CTA Section */}
+        <section
+          id="call-to-action"
+          aria-labelledby="call-to-action-heading"
+          className="bg-cover bg-center py-16 px-4 bg-fixed bg-[url('Sodas.jpg')]"
+        >
+          <div className="max-w-4xl mx-auto text-center bg-white rounded-lg py-16 px-8 flex flex-col gap-y-4">
+            <h3 className="text-4xl font-bold text-center mb-6">
+              Order Online
+            </h3>
+            <p className="text-gray-600">
+              Enjoy the authentic flavors of Playa Taquería from the comfort of
+              your home! From our handcrafted Mexican tacos to our fresh,
+              house-made tortillas, order online for pickup or delivery and
+              bring the true taste of Mexico to your table in Montclair.
+            </p>
+            <div>
+              <a
+                href=""
+                className="bg-black text-white text-bold text-xl rounded-lg px-4 py-2"
+              >
+                Order Now
+              </a>
+            </div>
+          </div>
+        </section>
         {/* Gallery Section */}
         <section
           id="gallery"
@@ -173,6 +203,10 @@ export default function App() {
                 title: "Small Burrito",
                 img: BurritoSmall,
               },
+              {
+                title: "Quesodilla and Jaritos",
+                img: QuesodillaSoda,
+              },
             ].map((item, idx) => (
               <article
                 key={idx}
@@ -181,26 +215,11 @@ export default function App() {
                 <img
                   src={item.img}
                   alt={item.title}
-                  className="w-full h-56 object-cover"
+                  className="w-full object-cover"
                   loading="lazy"
                 />
               </article>
             ))}
-          </div>
-        </section>
-        {/* CTA Section */}
-        <section
-          id="call-to-action"
-          aria-labelledby="call-to-action-heading"
-          className="bg-white py-16 px-4"
-        >
-          <div className="max-w-4xl mx-auto text-center">
-            <a
-              href=""
-              className="bg-black text-white text-bold text-xl rounded-lg px-4 py-2"
-            >
-              Order Online
-            </a>
           </div>
         </section>
 
