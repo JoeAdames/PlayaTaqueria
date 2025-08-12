@@ -1,8 +1,20 @@
 // src/App.jsx
 import { Helmet } from "react-helmet";
+
+//menu favorites
 import Tacos from "./BirriaTacos.jpg";
 import ShortRib from "./ShortRib.jpg";
 import Nachos from "./NachosPorkBellyCarnitas.jpg";
+
+//gallery photos
+import BowlShortRibSuadero from "./BowlShortRibSuadero.jpg";
+import ChipsGuac from "./ChipsGuac.jpg";
+import ChickenTaco from "./ChickenTaco.jpg";
+import GalleryNachos from "./Nachos.jpg";
+import Quesodillas from "./Quesodillas.jpg";
+import ShrimpTaco from "./ShrimpTaco1.jpg";
+import Spread from "./Spread2.jpg";
+import BurritoSmall from "./BurritoSmall.jpg";
 
 export default function App() {
   return (
@@ -111,6 +123,67 @@ export default function App() {
                   <h3 className="text-2xl font-bold mb-2">{item.title}</h3>
                   <p className="text-gray-600">{item.desc}</p>
                 </div>
+              </article>
+            ))}
+          </div>
+        </section>
+        {/* Gallery Section */}
+        <section
+          id="gallery"
+          aria-labelledby="gallery-heading"
+          className="max-w-6xl mx-auto px-4 py-16"
+        >
+          <h2
+            id="galery-heading"
+            className="text-4xl font-bold text-center mb-12"
+          >
+            Gallery
+          </h2>
+          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+            {[
+              {
+                title: "Short Rib Bowl",
+                img: BowlShortRibSuadero,
+              },
+              {
+                title: "Chips and Guac",
+                img: ChipsGuac,
+              },
+              {
+                title: "Chicken Tacos",
+                img: ChickenTaco,
+              },
+              {
+                title: "Nachos",
+                img: GalleryNachos,
+              },
+              {
+                title: "Quesodillas",
+                img: Quesodillas,
+              },
+              {
+                title: "Shrimp Tacos",
+                img: ShrimpTaco,
+              },
+              {
+                title: "Variety Spread",
+                img: Spread,
+              },
+              {
+                title: "Small Burrito",
+                img: BurritoSmall,
+              },
+            ].map((item, idx) => (
+              <article
+                key={idx}
+                className="bg-white shadow-lg rounded-lg overflow-hidden hover:scale-110 transform transition"
+              >
+                <img
+                  src={item.img}
+                  alt={item.title}
+                  className="w-full h-56 object-cover"
+                  loading="lazy"
+                />
               </article>
             ))}
           </div>
