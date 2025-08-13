@@ -83,7 +83,7 @@ export default function App() {
         <section
           id="about"
           aria-labelledby="about-heading"
-          className="py-16 px-4 bg-red-900 text-white flex flex-col-reverse md:flex-row justify-center items-center gap-y-6"
+          className="py-16 px-4 bg-red-900 text-white flex flex-col-reverse lg:flex-row justify-center items-center gap-y-6"
         >
           <div className="px-8 py-4">
             <img
@@ -97,7 +97,7 @@ export default function App() {
             <h2 id="about-heading" className="text-4xl font-bold my-4">
               About Us
             </h2>
-            <p className="text-xl white leading-relaxed w-100">
+            <p className="text-xl white leading-relaxed ">
               For food lovers and Mexican cuisine enthusiasts in Montclair,
               Playa Taqueria is the only taqueria among all Mexican restaurants
               in the area that offers authentic, handcrafted nixtamal tortillas
@@ -194,7 +194,7 @@ export default function App() {
             </div>
           </div>
         </section>
-        {/* Contact Section */}8
+        {/* Contact Section */}
         <section
           id="contact"
           aria-labelledby="contact-heading"
@@ -308,14 +308,39 @@ export default function App() {
       </main>
 
       {/* Footer */}
-      <footer className="bg-red-900 text-white py-6 text-center flex flex-col justify-evenly sm:flex-row items-center">
-        <div className="text-center md:text-left space-y-4">
+      <footer className="bg-red-900 text-white py-6 text-center flex flex-col gap-y-10 justify-evenly lg:flex-row items-center">
+        <div>
+          <ul className="flex gap-x-4">
+            <li>
+              <a href="https://www.facebook.com/playataqueria">
+                <img
+                  src="https://cdn.simpleicons.org/facebook/0866FF"
+                  alt="FaceBook"
+                  className="h-8"
+                />
+              </a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/playataqueria/#">
+                <img
+                  src="https://cdn.simpleicons.org/instagram/FF0069"
+                  alt="Instagram"
+                  className="h-8"
+                />
+              </a>
+            </li>
+          </ul>
+        </div>
+        <p>
+          &copy; {new Date().getFullYear()} Playa Taqueria. All Rights Reserved.
+        </p>
+        <div className="text-center md:text-right space-y-4">
           <address className="not-italic">
             206 Bellevue Ave, Montclair, NJ 07043
           </address>
           <a
             href="tel:+19736790322"
-            className="font-medium hover:text-amber-400underline"
+            className="font-medium hover:text-amber-400 underline"
           >
             (973) 679-0322
           </a>
@@ -327,31 +352,6 @@ export default function App() {
               <span className="font-bold">Sun:</span> 11:00 AM - 7:00 PM
             </p>
           </div>
-        </div>
-        <p>
-          &copy; {new Date().getFullYear()} Playa Taqueria. All Rights Reserved.
-        </p>
-        <div>
-          <ul className="flex gap-x-4">
-            <li>
-              <a href="https://www.facebook.com/">
-                <img
-                  src="https://cdn.simpleicons.org/facebook/0866FF"
-                  alt="FaceBook"
-                  className="h-8"
-                />
-              </a>
-            </li>
-            <li>
-              <a href="https://www.facebook.com/">
-                <img
-                  src="https://cdn.simpleicons.org/instagram/FF0069"
-                  alt="Instagram"
-                  className="h-8"
-                />
-              </a>
-            </li>
-          </ul>
         </div>
       </footer>
     </>
