@@ -83,21 +83,21 @@ export default function App() {
         <section
           id="about"
           aria-labelledby="about-heading"
-          className="py-16 px-4 bg-red-900 text-white flex flex-col-reverse sm:flex-row justify-center items-center"
+          className="py-16 px-4 bg-red-900 text-white flex flex-col-reverse md:flex-row justify-center items-center gap-y-6"
         >
           <div className="px-8 py-4">
             <img
               src={AboutUs}
               alt="About Us"
-              className="w-full sm:h-96 rounded-lg"
+              className="w-100 rounded-lg"
               loading="lazy"
             />
           </div>
-          <div className="max-w-xl mx-auto flex flex-col gap-y-10 text-center sm:text-left">
+          <div className="max-w-xl flex flex-col gap-y-10 text-center sm:text-left">
             <h2 id="about-heading" className="text-4xl font-bold my-4">
               About Us
             </h2>
-            <p className="text-xl white leading-relaxed">
+            <p className="text-xl white leading-relaxed w-100">
               For food lovers and Mexican cuisine enthusiasts in Montclair,
               Playa Taqueria is the only taqueria among all Mexican restaurants
               in the area that offers authentic, handcrafted nixtamal tortillas
@@ -107,7 +107,6 @@ export default function App() {
             </p>
           </div>
         </section>
-
         {/* Menu Section */}
         <section
           id="menu"
@@ -149,7 +148,7 @@ export default function App() {
             ].map((item, idx) => (
               <article
                 key={idx}
-                className="bg-white shadow-lg rounded-lg overflow-hidden hover:scale-105 transform transition hover:border-t-4 hover: border-t-amber-400"
+                className="bg-white shadow-lg rounded-lg overflow-hidden hover:scale-105 transform transition"
               >
                 <img
                   src={item.img}
@@ -195,27 +194,26 @@ export default function App() {
             </div>
           </div>
         </section>
-
-        {/* Contact Section */}
+        {/* Contact Section */}8
         <section
           id="contact"
           aria-labelledby="contact-heading"
-          className="max-w-screen mx-auto px-4 py-16 bg-red-900 text-white flex items-center justify-center gap-y-10 sm:gap-x-10 flex-col sm:flex-row"
+          className="max-w-screen mx-auto px-4 py-16 bg-red-900 text-white flex items-center justify-center gap-y-10 md:gap-x-10 flex-col md:flex-row"
         >
           <div>
             <h2
               id="contact-heading"
-              className="text-4xl font-bold text-center sm:text-right mb-8"
+              className="text-4xl font-bold text-center md:text-right mb-8"
             >
               Visit Us
             </h2>
-            <div className="text-center sm:text-right space-y-4">
+            <div className="text-center md:text-right space-y-4">
               <address className="not-italic text-xl">
                 206 Bellevue Ave, Montclair, NJ 07043
               </address>
               <a
                 href="tel:+19736790322"
-                className="font-medium hover:underline hover:text-amber-400 text-xl"
+                className="font-medium hover:text-amber-400 text-xl underline"
               >
                 (973) 679-0322
               </a>
@@ -310,10 +308,51 @@ export default function App() {
       </main>
 
       {/* Footer */}
-      <footer className="bg-red-900 text-white py-6 text-center">
+      <footer className="bg-red-900 text-white py-6 text-center flex flex-col justify-evenly sm:flex-row items-center">
+        <div className="text-center md:text-left space-y-4">
+          <address className="not-italic">
+            206 Bellevue Ave, Montclair, NJ 07043
+          </address>
+          <a
+            href="tel:+19736790322"
+            className="font-medium hover:text-amber-400underline"
+          >
+            (973) 679-0322
+          </a>
+          <div className="py-4">
+            <p>
+              <span className="font-bold">Mon-Sat:</span> 11:00 AM - 8:00 PM
+            </p>
+            <p>
+              <span className="font-bold">Sun:</span> 11:00 AM - 7:00 PM
+            </p>
+          </div>
+        </div>
         <p>
           &copy; {new Date().getFullYear()} Playa Taqueria. All Rights Reserved.
         </p>
+        <div>
+          <ul className="flex gap-x-4">
+            <li>
+              <a href="https://www.facebook.com/">
+                <img
+                  src="https://cdn.simpleicons.org/facebook/0866FF"
+                  alt="FaceBook"
+                  className="h-8"
+                />
+              </a>
+            </li>
+            <li>
+              <a href="https://www.facebook.com/">
+                <img
+                  src="https://cdn.simpleicons.org/instagram/FF0069"
+                  alt="Instagram"
+                  className="h-8"
+                />
+              </a>
+            </li>
+          </ul>
+        </div>
       </footer>
     </>
   );
