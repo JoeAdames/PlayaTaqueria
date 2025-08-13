@@ -1,6 +1,3 @@
-// src/App.jsx
-import { Helmet } from "react-helmet";
-
 //About photos
 import AboutUs from "./AboutUS.jpg";
 
@@ -29,16 +26,6 @@ import Taunt from "./taunt.jpg";
 export default function App() {
   return (
     <>
-      {/* SEO Metadata */}
-      <Helmet>
-        <title>Playa Taqueria | Authentic, Fresh, Handcrafted</title>
-        <meta
-          name="description"
-          content="For food lovers and Mexican cuisine enthusiasts in Montclair, Playa Taqueria is the only taqueria among all Mexican restaurants in the area that offers authentic, handcrafted nixtamal tortillas with creative flavor combinations because of its commitment to traditional Mexican techniques, fresh ingredients, and innovative culinary approach."
-        />
-        <link rel="canonical" href="https://eatplaya.com/" />
-      </Helmet>
-
       {/* Header */}
       <header className="bg-white shadow-md sticky top-0 z-50 py-2">
         <nav className="max-w-6xl mx-auto px-4 flex flex-col sm:flex-row justify-between items-center h-16">
