@@ -1,7 +1,10 @@
 // src/App.jsx
 import { Helmet } from "react-helmet";
 
-//menu favorites
+//About photos
+import AboutUs from "./AboutUS.jpg";
+
+//menu feature photos
 import Tacos from "./BirriaTacos.jpg";
 import ShortRib from "./ShortRib.jpg";
 import Nachos from "./NachosPorkBellyCarnitas.jpg";
@@ -19,6 +22,9 @@ import BurritoSmall from "./BurritoSmall.jpg";
 
 //CTA BG
 import Sodas from "./Sodas.jpg";
+
+//visit us taunt
+import Taunt from "./taunt.jpg";
 
 export default function App() {
   return (
@@ -41,13 +47,23 @@ export default function App() {
           </div>
           <ul className="flex space-x-6 text-gray-700 font-medium">
             <li>
+              <a href="#about" className="hover:text-amber-600">
+                About
+              </a>
+            </li>
+            <li>
               <a href="#menu" className="hover:text-amber-600">
                 Menu
               </a>
             </li>
             <li>
-              <a href="#about" className="hover:text-amber-600">
-                About
+              <a href="#call-to-action" className="hover:text-amber-600">
+                Order
+              </a>
+            </li>
+            <li>
+              <a href="#gallery" className="hover:text-amber-600">
+                Gallery
               </a>
             </li>
             <li>
@@ -64,37 +80,67 @@ export default function App() {
         <section
           id="hero"
           aria-labelledby="hero-heading"
-          className="bg-cover bg-center h-screen flex flex-col justify-center items-center text-center px-4 bg-[url('HeroShot2.jpg')]"
+          className="bg-cover bg-center bg-fixed h-screen flex flex-col justify-center items-center text-center px-4 bg-[url('HeroShot2.jpg')]"
         >
           <h1
             id="hero-heading"
-            className="text-5xl md:text-6xl font-bold text-white drop-shadow-lg"
+            className="text-5xl md:text-6xl font-bold text-shadow-2xs drop-shadow-lg text-white"
           >
-            Fresh, Local, Unforgettable
+            Authentic, Fresh, Handcrafted
           </h1>
-          <p className="mt-4 text-xl text-white max-w-2xl drop-shadow-lg">
-            Experience locally sourced dishes made with passion and served with
-            care.
-          </p>
           <a
             href="#menu"
-            className="mt-6 bg-amber-600 text-white px-6 py-3 rounded-full text-lg font-medium hover:bg-amber-700 transition"
+            className="mt-6 bg-red-900 text-white px-6 py-3 rounded-full text-lg font-medium hover:bg-orange-400 transition"
           >
-            View Menu
+            Order Now
           </a>
+        </section>
+        {/* About Section */}
+        <section
+          id="about"
+          aria-labelledby="about-heading"
+          className="py-16 px-4 bg-red-900 text-white flex flex-col-reverse sm:flex-row justify-center items-center"
+        >
+          <div className="px-8 py-4">
+            <img
+              src={AboutUs}
+              alt="About Us"
+              className="w-full sm:h-96 rounded-lg"
+              loading="lazy"
+            />
+          </div>
+          <div className="max-w-xl mx-auto flex flex-col gap-y-10 text-center sm:text-left">
+            <h2 id="about-heading" className="text-4xl font-bold my-4">
+              About Us
+            </h2>
+            <p className="text-xl white leading-relaxed">
+              For food lovers and Mexican cuisine enthusiasts in Montclair,
+              Playa Taqueria is the only taqueria among all Mexican restaurants
+              in the area that offers authentic, handcrafted nixtamal tortillas
+              with creative flavor combinations because of its commitment to
+              traditional Mexican techniques, fresh ingredients, and innovative
+              culinary approach.
+            </p>
+          </div>
         </section>
 
         {/* Menu Section */}
         <section
           id="menu"
           aria-labelledby="menu-heading"
-          className="max-w-6xl mx-auto px-4 py-16"
+          className="max-w-6xl mx-auto px-4 py-16 flex flex-col gap-y-12 mt-12"
         >
           <h2
             id="menu-heading"
-            className="text-4xl font-bold text-center mb-12"
+            className="text-4xl font-bold flex flex-col-reverse sm:flex-row gap-y-12 justify-between"
           >
-            Our Favorites
+            Featured
+            <a
+              href="#"
+              className="font-bold text-xl px-6 py-3 rounded-full shadow-lg text-center sm:text-left bg-red-900 hover:bg-orange-400 text-white"
+            >
+              View Menu
+            </a>
           </h2>
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {[
@@ -102,46 +148,54 @@ export default function App() {
                 title: "Short Rib Tacos",
                 desc: "Warm Totillas, Pico de gallo, slow cooked Short Rib",
                 img: ShortRib,
+                link: "www.google.com",
               },
               {
                 title: "Pork Belly Nachos & Carnitas",
-                desc: "San Marzano tomatoes, fresh mozzarella, basil, olive oil.",
+                desc: "Homemade tortilla chips topped with crunchy pork belly, and sweet carnitas",
                 img: Nachos,
+                link: "www.google.com",
               },
               {
                 title: "Birria Tacos",
-                desc: "Organic greens, roasted beets, goat cheese, balsamic glaze.",
+                desc: "Marinated beef, our famous homemade tortillas, topped with queso fresco.",
                 img: Tacos,
+                link: "#",
               },
             ].map((item, idx) => (
               <article
                 key={idx}
-                className="bg-white shadow-lg rounded-lg overflow-hidden hover:scale-105 transform transition"
+                className="bg-white shadow-lg rounded-lg overflow-hidden hover:scale-105 transform transition hover:border-t-4 hover: border-t-amber-400"
               >
                 <img
                   src={item.img}
                   alt={item.title}
                   className="w-full h-48 object-cover"
+                  loading="lazy"
                 />
-                <div className="p-6">
-                  <h3 className="text-2xl font-bold mb-2">{item.title}</h3>
+                <div className="p-6 flex flex-col gap-y-4">
+                  <h3 className="text-2xl font-bold">{item.title}</h3>
                   <p className="text-gray-600">{item.desc}</p>
+                  <a className="" href={item.link}>
+                    Add to Order
+                  </a>
                 </div>
               </article>
             ))}
           </div>
+          <div className="flex justify-center"></div>
         </section>
         {/* CTA Section */}
         <section
           id="call-to-action"
           aria-labelledby="call-to-action-heading"
-          className="bg-cover bg-center py-16 px-4 bg-fixed bg-[url('Sodas.jpg')]"
+          className="bg-cover bg-center py-36 px-4 bg-fixed bg-[url('Sodas.jpg')] shadow-inner"
         >
           <div className="max-w-4xl mx-auto text-center bg-white rounded-lg py-16 px-8 flex flex-col gap-y-4">
             <h3 className="text-4xl font-bold text-center mb-6">
               Order Online
             </h3>
-            <p className="text-gray-600">
+            <p className="text-black mb-6 text-bold text-xl">
               Enjoy the authentic flavors of Playa Taquería from the comfort of
               your home! From our handcrafted Mexican tacos to our fresh,
               house-made tortillas, order online for pickup or delivery and
@@ -150,11 +204,58 @@ export default function App() {
             <div>
               <a
                 href=""
-                className="bg-black text-white text-bold text-xl rounded-lg px-4 py-2"
+                className="bg-red-900 hover:bg-orange-400 text-white text-bold text-xl rounded-lg px-4 py-2"
               >
                 Order Now
               </a>
             </div>
+          </div>
+        </section>
+
+        {/* Contact Section */}
+        <section
+          id="contact"
+          aria-labelledby="contact-heading"
+          className="max-w-screen mx-auto px-4 py-16 bg-red-900 text-white flex items-center justify-center gap-y-10 sm:gap-x-10 flex-col sm:flex-row"
+        >
+          <div>
+            <h2
+              id="contact-heading"
+              className="text-4xl font-bold text-center sm:text-right mb-8"
+            >
+              Visit Us
+            </h2>
+            <div className="text-center sm:text-right space-y-4">
+              <address className="not-italic text-xl">
+                206 Bellevue Ave, Montclair, NJ 07043
+              </address>
+              <a
+                href="tel:+19736790322"
+                className="font-medium hover:underline hover:text-amber-400 text-xl"
+              >
+                (973) 679-0322
+              </a>
+              <div className="py-4">
+                <h3 className="text-2xl font-bold ">Restaurant Hours</h3>
+                <p>
+                  <span className="font-bold text-xl">Mon-Sat:</span> 11:00 AM -
+                  8:00 PM
+                </p>
+                <p>
+                  <span className="font-bold text-xl">Sun:</span> 11:00 AM -
+                  7:00 PM
+                </p>
+              </div>
+              <a
+                href="#"
+                className="bg-white rounded-full text-red-900 px-4 py-2 font-bold hover:bg-amber-400 hover:text-white"
+              >
+                Get Directions
+              </a>
+            </div>
+          </div>
+          <div>
+            <img src={Taunt} alt="Taunt" className="w-100 rounded-lg" />
           </div>
         </section>
         {/* Gallery Section */}
@@ -171,6 +272,10 @@ export default function App() {
           </h2>
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {[
+              {
+                title: "Shrimp Tacos",
+                img: ShrimpTaco,
+              },
               {
                 title: "Short Rib Bowl",
                 img: BowlShortRibSuadero,
@@ -192,10 +297,6 @@ export default function App() {
                 img: Quesodillas,
               },
               {
-                title: "Shrimp Tacos",
-                img: ShrimpTaco,
-              },
-              {
                 title: "Variety Spread",
                 img: Spread,
               },
@@ -210,68 +311,24 @@ export default function App() {
             ].map((item, idx) => (
               <article
                 key={idx}
-                className="bg-white shadow-lg rounded-lg overflow-hidden hover:scale-110 transform transition"
+                className="bg-white shadow-lg rounded-lg overflow-hidden"
               >
                 <img
                   src={item.img}
                   alt={item.title}
-                  className="w-full object-cover"
+                  className="w-full object-cover hover:scale-105 transform transition"
                   loading="lazy"
                 />
               </article>
             ))}
           </div>
         </section>
-
-        {/* About Section */}
-        <section
-          id="about"
-          aria-labelledby="about-heading"
-          className="bg-gray-50 py-16 px-4"
-        >
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 id="about-heading" className="text-4xl font-bold mb-6">
-              About Us
-            </h2>
-            <p className="text-lg text-gray-700 leading-relaxed">
-              Founded in 2010, Riverside Bistro brings the best of farm-to-table
-              dining to the heart of the city. Our chefs work closely with local
-              farmers to deliver fresh, flavorful dishes year-round.
-            </p>
-          </div>
-        </section>
-
-        {/* Contact Section */}
-        <section
-          id="contact"
-          aria-labelledby="contact-heading"
-          className="max-w-6xl mx-auto px-4 py-16"
-        >
-          <h2
-            id="contact-heading"
-            className="text-4xl font-bold text-center mb-8"
-          >
-            Visit Us
-          </h2>
-          <div className="text-center space-y-4">
-            <address className="not-italic text-lg text-gray-700">
-              206 Bellevue Ave, Montclair, NJ 07043
-            </address>
-            <a
-              href="tel:+19736790322"
-              className="text-amber-600 font-medium hover:underline"
-            >
-              (973) 679-0322
-            </a>
-          </div>
-        </section>
       </main>
 
       {/* Footer */}
-      <footer className="bg-gray-900 text-gray-400 py-6 text-center">
+      <footer className="bg-red-900 text-white py-6 text-center">
         <p>
-          &copy; {new Date().getFullYear()} Riverside Bistro. All Rights
-          Reserved.
+          &copy; {new Date().getFullYear()} Playa Taqueria. All Rights Reserved.
         </p>
       </footer>
     </>
