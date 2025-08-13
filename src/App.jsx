@@ -17,11 +17,8 @@ import ShrimpTaco from "./ShrimpTaco1.jpg";
 import Spread from "./Spread2.jpg";
 import BurritoSmall from "./BurritoSmall.jpg";
 
-//CTA BG
-import Sodas from "./Sodas.jpg";
-
 //visit us taunt
-import Taunt from "./taunt.jpg";
+import Taunt from "./Taunt.jpg";
 
 export default function App() {
   return (
