@@ -13,7 +13,7 @@ import ChickenTaco from "./ChickenTaco.jpg";
 import GalleryNachos from "./Nachos.jpg";
 import QuesodillaSoda from "./QuesadillaSoda.jpg";
 import Quesodillas from "./Quesodillas.jpg";
-import ShrimpTaco from "./ShrimpTaco1.jpg";
+import ShrimpTaco from "./ShrimpTaco.jpg";
 import Spread from "./Spread2.jpg";
 import BurritoSmall from "./BurritoSmall.jpg";
 
