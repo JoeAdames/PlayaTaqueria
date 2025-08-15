@@ -5,7 +5,7 @@ export default function Hero() {
     <section
       id="hero"
       aria-labelledby="hero-heading"
-      className="bg-cover bg-center bg-fixed h-screen flex flex-col justify-center items-center text-center px-4 bg-[url('./gallery/HeroShot2.webp')]"
+      className="bg-cover bg-center bg-fixed h-screen flex flex-col justify-center items-center text-center px-4 bg-[url('./gallery/HeroShotSmall2.webp')] md:bg-[url('./gallery/HeroShot2.webp')]"
     >
       <h1
         id="hero-heading"
