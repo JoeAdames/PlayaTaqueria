@@ -1,8 +1,8 @@
 import React from "react";
 //menu feature photos
-import Tacos from "../gallery/BirriaTacos.jpg";
-import ShortRib from "../gallery/ShortRib.jpg";
-import Nachos from "../gallery/NachosPorkBellyCarnitas.jpg";
+import Tacos from "../gallery/BirriaTacos.webp";
+import ShortRib from "../gallery/ShortRib.webp";
+import Nachos from "../gallery/NachosPorkBellyCarnitas.webp";
 
 export default function Menu() {
   return (

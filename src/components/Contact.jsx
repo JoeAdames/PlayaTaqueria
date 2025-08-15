@@ -1,6 +1,6 @@
 import React from "react";
 //visit us taunt
-import Taunt from "../gallery/Taunt.jpg";
+import Taunt from "../gallery/Taunt.webp";
 
 export default function Contact() {
   return (
