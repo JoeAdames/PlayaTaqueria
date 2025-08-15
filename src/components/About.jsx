@@ -1,6 +1,6 @@
 import React from "react";
 //About photos
-import AboutUs from "../gallery/AboutUs.jpg";
+import AboutUs from "../gallery/AboutUS.jpg";
 
 export default function About() {
   return (
