@@ -1,6 +1,6 @@
 import React from "react";
 //About photos
-import AboutUs from "../gallery/AboutUS.webp";
+import AboutUs from "../gallery/Desktop/AboutUS.webp";
 
 export default function About() {
   return (

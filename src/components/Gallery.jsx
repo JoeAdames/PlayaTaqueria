@@ -1,15 +1,15 @@
 import React from "react";
 
 //gallery photos
-import BowlShortRibSuadero from "../gallery/BowlShortRibSuadero.webp";
-import ChipsGuac from "../gallery/ChipsGuac.webp";
-import ChickenTaco from "../gallery/ChickenTaco.webp";
-import GalleryNachos from "../gallery/Nachos.webp";
-import QuesodillaSoda from "../gallery/QuesadillaSoda.webp";
-import Quesodillas from "../gallery/Quesodillas.webp";
-import ShrimpTaco from "../gallery/ShrimpTaco.webp";
-import Spread from "../gallery/Spread2.webp";
-import BurritoSmall from "../gallery/BurritoSmall.webp";
+import BowlShortRibSuadero from "../gallery/Desktop/BowlShortRibSuadero.webp";
+import ChipsGuac from "../gallery/Desktop/ChipsGuac.webp";
+import ChickenTaco from "../gallery/Desktop/ChickenTaco.webp";
+import GalleryNachos from "../gallery/Desktop/Nachos.webp";
+import QuesodillaSoda from "../gallery/Desktop/QuesadillaSoda.webp";
+import Quesodillas from "../gallery/Desktop/Quesodillas.webp";
+import ShrimpTaco from "../gallery/Desktop/ShrimpTaco.webp";
+import Spread from "../gallery/Desktop/Spread2.webp";
+import BurritoSmall from "../gallery/Desktop/BurritoSmall.webp";
 
 export default function Gallery() {
   return (
